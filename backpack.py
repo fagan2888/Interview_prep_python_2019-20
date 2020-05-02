@@ -54,6 +54,10 @@ def max_val_pack(max_size, max_time, sizes, times, values):
     print('The best way to pack the truck is:', best_way, 'the maximal value is:', max_value)
     return (best_way, max_value)
 
+#max_val_pack(max_size, max_time, sizes, times, values)
+#The best way to pack the truck is: [1, 1, 1, 0] the maximal value is: 8
+#Out[74]: ([1, 1, 1, 0], 8)
+
 '''
 The right way to solve this problem would be to use dynamic programming, o(n^2) time, space O(max_size*n)
 
@@ -93,6 +97,7 @@ def dp_best_value(max_size, max_time, sizes, times, values):
         possible = list(filter(lambda num : num <= max_value, dp_size))
         return max(possible)
         
-    
+#dp_best_value(max_size, max_time, sizes, times, values)
+#Out[76]: 8 
             
         
